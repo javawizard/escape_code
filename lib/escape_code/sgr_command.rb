@@ -4,14 +4,14 @@ class EscapeCode::SgrCommand
   BOLD = '1'
 
   COLORS = {
-    0 => :black,
-    1 => :red,
-    2 => :green,
-    3 => :yellow,
-    4 => :blue,
-    5 => :purple,
-    6 => :cyan,
-    7 => :white
+    '0' => :black,
+    '1' => :red,
+    '2' => :green,
+    '3' => :yellow,
+    '4' => :blue,
+    '5' => :purple,
+    '6' => :cyan,
+    '7' => :white
   }
 
   attr_reader :type
@@ -39,6 +39,6 @@ class EscapeCode::SgrCommand
   def color
     return nil unless foreground_color? || background_color?
 
-    colors[type[1]]
+    EscapeCode::SgrCommand::COLORS[type[1]]
   end
 end

@@ -41,6 +41,9 @@ class EscapeCode::HtmlFormatter::ColorScheme
       stylesheet << ".#{prefix}#{color}-foreground {\n  background-color: #{value};\n}"
     end
 
+    # TODO: Do this in a better way
+    stylesheet << ".#{prefix}bold {\n  font-weight: bold;\n}"
+
     stylesheet.join("\n")
   end
 end
