@@ -38,7 +38,7 @@ class EscapeCode::HtmlFormatter::ColorScheme
     end
 
     @foreground.each do |color, value|
-      stylesheet << ".#{prefix}#{color}-foreground {\n  background-color: #{value};\n}"
+      stylesheet << ".#{prefix}#{color}-foreground {\n  color: #{value};\n}"
     end
 
     # TODO: Do this in a better way

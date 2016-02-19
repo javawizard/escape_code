@@ -7,5 +7,11 @@ RSpec.describe EscapeCode do
     expect(result).to eq(expected)
   end
 
+  it 'generates stylesheets that have both background and foreground colors' do
+    stylesheet = EscapeCode::HtmlFormatter::ColorScheme.default.generate_stylesheet
+    expect(stylesheet).to match(/ background-color:/)
+    expect(stylesheet).to match(/ color:/)
+  end
+
   it 'should probably have more specs'
 end
