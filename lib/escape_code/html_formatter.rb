@@ -1,0 +1,3 @@
+
+class EscapeCode::HtmlFormatter
+end

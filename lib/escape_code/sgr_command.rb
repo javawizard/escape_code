@@ -9,7 +9,7 @@ class EscapeCode::SgrCommand
     2 => :green,
     3 => :yellow,
     4 => :blue,
-    5 => :magenta,
+    5 => :purple,
     6 => :cyan,
     7 => :white
   }
